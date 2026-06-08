@@ -1,0 +1,87 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  height:100vh;
+
+  background-image:url("peakpx.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.grid{
+  position:absolute;
+  inset:0;
+
+  background-image:
+  linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+
+  background-size:40px 40px;
+}
+
+.grid::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to bottom,
+    /* #5b21ff 0%,
+    #3646d3 25%,
+    #98a6c9 55%, */
+    rgba(0,0,0,.3) 75%,
+    #111 100%
+  );
+
+  opacity:.85;
+}
+
+.overlay{
+  position:relative;
+  z-index:10;
+
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+h1{
+  color:white;
+  font-size:4rem;
+  margin-bottom:25px;
+  text-shadow:0 0 25px rgba(255,255,255,.4);
+}
+
+.timer{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.box{
+  text-align:center;
+}
+
+.box span{
+  display:block;
+  color:white;
+  font-size:5rem;
+  font-weight:bold;
+  text-shadow:0 0 20px rgba(255,255,255,.4);
+}
+
+.box label{
+  color:white;
+  letter-spacing:2px;
+}
